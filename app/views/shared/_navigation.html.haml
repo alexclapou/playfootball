@@ -1,0 +1,28 @@
+%nav.navbar.navbar-light.navbar-expand-md.py-3
+  .container
+    %div.navbar-brand.d-flex.align-items-center
+      =link_to root_path, class:'a navbar-brand d-flex align-items-center' do
+        =image_tag "logo", :style=>'width: 1.2em;', class:'me-2' 
+        %span.text-dark PlayFootball
+      -# =link_to root_path, class:'text-decoration-none' do ^^
+    %button.navbar-toggler{"data-bs-target" => "#navcol-4", "data-bs-toggle" => "collapse"}
+      %span.visually-hidden Toggle navigation
+      %span.navbar-toggler-icon
+    #navcol-4.collapse.navbar-collapse.flex-grow-0.order-md-first
+      %ul.navbar-nav.me-auto
+        %li.nav-item
+          =link_to 'Home', root_path, class: 'nav-link'
+        %li.nav-item
+          =link_to 'News', root_path, class: 'nav-link'
+        -# -if can? :read, :team_page
+          %li.nav-item
+            =link_to 'Team', root_path, class: 'nav-link'
+      .d-md-none.my-2
+        =link_to 'Sign in', root_path, class:'btn btn-dark me-2'
+        =link_to 'Sign up', root_path, class:'btn btn-light'
+    .d-none.d-md-block
+      -if false
+        =link_to 'Sign out', 'destroy_user_session_path', data: { turbo_method: :delete }, class:'btn btn-dark me-2'
+      -else
+        =link_to 'Sign in', 'new_user_session_path', class:'btn btn-dark me-2'
+        =link_to 'Sign up', 'new_user_registration_path', class:'btn btn-light'
