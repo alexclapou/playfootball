@@ -13,4 +13,15 @@
  *= require_tree .
  *= require_self
  */
- $primary-color: green
+ @import "variables.scss";
+ @import url("https://use.typekit.net/czt6swq.css");
+
+body{
+    background-color: $bg-primary-color !important;
+}
+
+*{
+    color: $text-primary-color !important;
+    font-family: raleway, sans-serif !important;
+    font-weight: 500 !important;
+}
