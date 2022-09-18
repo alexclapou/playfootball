@@ -1,0 +1,11 @@
+%ul#myTab.nav.nav-tabs
+  %li.nav-item{:role => "presentation"}
+    %button#profile-tab.nav-link{"aria-controls" => "profile", "aria-selected" => "false", "data-bs-target" => "#profile", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} Profile
+  %li.nav-item{:role => "presentation"}
+    %button#profile-tab.nav-link{"aria-controls" => "profile", "aria-selected" => "false", "data-bs-target" => "#profile", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} Settings
+  %li.nav-item{:role => "presentation"}
+    %button#contact-tab.nav-link{"aria-controls" => "contact", "aria-selected" => "false", "data-bs-target" => "#contact", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} Language & Themes
+#myTabContent.tab-content
+  #home.tab-pane.fade.show.active{"aria-labelledby" => "home-tab", :role => "tabpanel"}a
+  #profile.tab-pane.fade{"aria-labelledby" => "profile-tab", :role => "tabpanel"} b
+  #contact.tab-pane.fade{"aria-labelledby" => "contact-tab", :role => "tabpanel"} c

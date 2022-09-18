@@ -1,6 +1,31 @@
-$bg-primary-color: #000000;
-$bg-sec-color: #2b2b2b;
-$text-primary-color: #E4E6EB;
-$primary-color: #FEBE10
+$text-color-dark: #E4E6EB;
+$background-color-dark: #000000;
+$secondary-color-dark: #1a1a1a;
+$important-color-dark: #FEBE10;
+$hover-color-dark: #FEBE10;
 
 
+$text-color-light: #1a1a1a;
+$background-color-light: white;
+$secondary-color-light: #f5f5fa;
+$important-color-light: black;
+$hover-color-light: #2a45f0;
+
+
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body.l {
+        --text-color: #{$text-color-light};
+        --background-color: #{$background-color-light} !important;
+        --secondary-color: #{$secondary-color-light};
+        --important-color: #{$important-color-light};
+        --hover-color: #{$hover-color-light};
+    }
+    body{
+        --text-color: #{$text-color-dark};
+        --background-color: #{$background-color-dark} !important;
+        --secondary-color: #{$secondary-color-dark};
+        --important-color: #{$important-color-dark};
+        --hover-color: #{$hover-color-dark};
+    }
+}
