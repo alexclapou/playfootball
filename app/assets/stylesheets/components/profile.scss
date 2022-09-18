@@ -1,0 +1,28 @@
+.profile-photo-name{
+    color: var(--text-color) !important;
+    .circle{
+        background: var(--secondary-color);
+        width: 3.5rem; 
+        height: 3.5rem;
+        border-radius: 50%;
+        display: flex; /* or inline-flex */
+        align-items: center; 
+        justify-content: center;
+        svg{
+            fill: var(--text-color);
+        }
+        .inside-circle{
+            height: 10rem !important;
+        }
+    }
+    .profile-info-area{
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem !important;
+        .sign-in-text{
+            color: var(--text-color) !important;
+            margin-top: -.5rem !important;
+            font-weight: 300 !important;
+        }    
+    }
+}

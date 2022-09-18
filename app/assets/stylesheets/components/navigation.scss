@@ -66,8 +66,9 @@
             width: 2.55rem;
             background-color: var(--secondary-color);
             border-radius: 50%;
-            text-align: center;
-            display: inline-block;
+            display: flex; /* or inline-flex */
+            align-items: center; 
+            justify-content: center;
             svg{
                 cursor: pointer;
                 fill: var(--text-color);

@@ -16,12 +16,6 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
   %body.pb-md-0.pb-3{class: cookies[:theme]&.split('-')&.last}
     =render partial: 'shared/navigation'
-    %input{:name => "theme-radio", :id => "auto-theme", :type => "radio", :value => "auto",  :checked => "checked", :class => "choose-theme"}/
-    %label{:for => "auto-theme"} Auto
-    %input{:name => "theme-radio", :id => "dark-theme", :type => "radio", :value => "dark", :class => "choose-theme"}/
-    %label{:for => "dark-theme"} Dark
-    %input{:name => "theme-radio", :id => "light-theme", :type => "radio", :value => "light", :class => "choose-theme"}/
-    %label{:for => "light-theme"} Light
-    .container
+    .container.min-vh-100.pt-5
       = yield
     =render partial: 'shared/footer'
