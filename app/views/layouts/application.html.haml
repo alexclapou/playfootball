@@ -14,8 +14,14 @@
     %script{:crossorigin => "anonymous", :integrity => "sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF", :src => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"}
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
-  %body.pb-md-0.pb-3
+  %body.pb-md-0.pb-3{class: cookies[:theme]&.split('-')&.last}
     =render partial: 'shared/navigation'
+    %input{:name => "theme-radio", :id => "auto-theme", :type => "radio", :value => "auto",  :checked => "checked", :class => "choose-theme"}/
+    %label{:for => "auto-theme"} Auto
+    %input{:name => "theme-radio", :id => "dark-theme", :type => "radio", :value => "dark", :class => "choose-theme"}/
+    %label{:for => "dark-theme"} Dark
+    %input{:name => "theme-radio", :id => "light-theme", :type => "radio", :value => "light", :class => "choose-theme"}/
+    %label{:for => "light-theme"} Light
     .container
       = yield
     =render partial: 'shared/footer'

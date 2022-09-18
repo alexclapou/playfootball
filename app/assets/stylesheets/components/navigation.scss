@@ -1,5 +1,4 @@
 @import "variables.scss";
-@import url("https://use.typekit.net/czt6swq.css");
 
 
 .mobile-navigation{
@@ -27,7 +26,7 @@
 }
 
 .full-desktop-navigation{
-    background-color: var(--background-color);
+    background-color: var(--background-color) !important;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -49,7 +48,7 @@
                     font-weight: 500 !important;
                     padding-left: 0rem !important;
                     padding-right: 0rem !important;
-                    color: var(--text-color);
+                    color: var(--text-color) !important;
                 }
             }
             .desktop-logo{
@@ -81,6 +80,7 @@
             }
             cursor: pointer;
             transition: box-shadow .2s ease-in-out;
+            
         }
         .not-active{
             &:hover{

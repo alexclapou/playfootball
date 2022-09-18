@@ -13,19 +13,35 @@ $hover-color-light: #2a45f0;
 
 
 @media (prefers-color-scheme: dark) {
-    /* defaults to dark theme */
-    body.l {
-        --text-color: #{$text-color-light};
-        --background-color: #{$background-color-light} !important;
-        --secondary-color: #{$secondary-color-light};
-        --important-color: #{$important-color-light};
-        --hover-color: #{$hover-color-light};
-    }
     body{
-        --text-color: #{$text-color-dark};
+        --text-color: #{$text-color-dark} !important;
         --background-color: #{$background-color-dark} !important;
-        --secondary-color: #{$secondary-color-dark};
-        --important-color: #{$important-color-dark};
-        --hover-color: #{$hover-color-dark};
+        --secondary-color: #{$secondary-color-dark} !important;
+        --important-color: #{$important-color-dark} !important;
+        --hover-color: #{$hover-color-dark} !important;
     }
+}
+@media (prefers-color-scheme: light){
+    body{
+        --text-color: #{$text-color-light} !important;
+        --background-color: #{$background-color-light} !important;
+        --secondary-color: #{$secondary-color-light} !important;
+        --important-color: #{$important-color-light} !important;
+        --hover-color: #{$hover-color-light} !important;
+    }
+}
+
+body.light{
+    --text-color: #{$text-color-light} !important;
+    --background-color: #{$background-color-light} !important;
+    --secondary-color: #{$secondary-color-light} !important;
+    --important-color: #{$important-color-light} !important;
+    --hover-color: #{$hover-color-light} !important;
+}
+body.dark{
+    --text-color: #{$text-color-dark} !important;
+    --background-color: #{$background-color-dark} !important;
+    --secondary-color: #{$secondary-color-dark} !important;
+    --important-color: #{$important-color-dark} !important;
+    --hover-color: #{$hover-color-dark} !important;
 }
