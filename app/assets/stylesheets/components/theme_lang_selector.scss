@@ -13,6 +13,7 @@
     }
     .theme-div{
         input{
+            box-shadow: none !important;
             cursor: pointer;
             background-color: red;
         }
@@ -21,13 +22,15 @@
             cursor: pointer;
         }
         input[type="checkbox"] {
-            outline: none;
             box-shadow: none;
         }
         padding-top: 2rem;
-        .theme-selector{
+        .theme-lang-selector{
+            a{
+                color: var(--text-color) !important;
+            }
             .selector{
-                border-radius: .5rem;
+                margin-top: 1rem;
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;

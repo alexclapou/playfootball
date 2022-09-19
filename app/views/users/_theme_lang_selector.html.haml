@@ -1,0 +1,36 @@
+.theme-div
+  %h5
+    =t('profile.language')
+  .row.pt-2
+    .theme-lang-selector.col-md-4.col-sm-4.col-6
+      %a{:href => "/en/profile"}
+        %label{:for => "en-lang"}
+          .selector
+            =t('profile.en')
+            %input{:name => "lang-radio", :id => "en-lang", :type => "radio", :value => "auto",  :checked => params[:locale] == 'en', :class => "form-check-input"}
+    .theme-lang-selector.col-md-4.col-sm-4.col-6
+      %a{:href => "/ro/profile"}
+        %label{:for => "ro-lang"}
+          .selector
+            =t('profile.ro')
+            %input{:name => "lang-radio", :id => "ro-lang", :type => "radio", :value => "dark", :checked => params[:locale] == 'ro', :class => "form-check-input"} 
+ASDDSADSADSADAS
+.theme-div
+  %h5
+    =t('profile.display_mode')
+  .row.pt-2
+    .theme-lang-selector.col-md-4.col-sm-4.col-6
+      %label{:for => "auto-theme"}
+        .selector
+          =t('profile.auto')
+          %input{:name => "theme-radio", :id => "auto-theme", :type => "radio", :value => "auto",  :checked => cookies[:theme] == 'auto', :class => "choose-theme form-check-input theme-selector-boxes"}
+    .theme-lang-selector.col-md-4.col-sm-4.col-6
+      %label{:for => "dark-theme"}
+        .selector
+          =t('profile.dark')
+          %input{:name => "theme-radio", :id => "dark-theme", :type => "radio", :value => "dark", :checked => cookies[:theme] == 'dark', :class => "choose-theme form-check-input theme-selector-boxes"} 
+    .theme-lang-selector.col-md-4.col-sm-4.col-6
+      %label{:for => "light-theme"}
+        .selector
+          =t('profile.light')
+          %input{:name => "theme-radio", :id => "light-theme", :type => "radio", :value => "light", :checked => cookies[:theme] == 'light', :class => "choose-theme form-check-input theme-selector-boxes"} 

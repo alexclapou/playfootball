@@ -1,0 +1,31 @@
+ro:
+  navigation:
+    home: Acasa
+    dashboard: Bord
+  footer:
+    quick_links: Link-uri rapide
+    news: Stiri
+    all_competitions: Toate competitiile
+    all_teams: Toate echipele
+    all_players: Toti jucatorii
+    play: Joaca
+    nearby_matches: Meciuri in apropiere
+    sports_ground: Baze sportive
+    about: Despre
+    store: Magazin
+    company: Companie
+    contact: Contact
+    follow_us: Urmareste-ne
+    motto: Fotbal. Oriunde. Oricand
+  profile:
+    profile: Profil
+    sign_in: Conecteaza-te
+    lang_theme: Limba & Afisare
+    settings: Setari
+    language: Limba
+    en: English
+    ro: Română
+    display_mode: Mod de afisare
+    auto: Automat
+    dark: Intunecat
+    light: Luminos

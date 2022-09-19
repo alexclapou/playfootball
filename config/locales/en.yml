@@ -30,4 +30,33 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navigation:
+    home: Home
+    dashboard: Dashboard
+  footer:
+    quick_links: Quick Links
+    news: News
+    all_competitions: All competitions
+    all_teams: All teams
+    all_players: All players
+    play: Play
+    nearby_matches: Nearby matches
+    sports_ground: Sports ground
+    about: About
+    store: Store
+    company: Company
+    contact: Contact
+    follow_us: Follow us
+    motto: Football. Anywhere. Anytime.
+  profile:
+    profile: Profile
+    sign_in: Sign in
+    lang_theme: Language & Display
+    settings: Settings
+    language: Language
+    en: English
+    ro: Română
+    display_mode: Display mode
+    auto: Auto
+    dark: Dark
+    light: Light
