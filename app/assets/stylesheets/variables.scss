@@ -1,15 +1,19 @@
-// $text-color-dark: #E4E6EB;
 $text-color-dark: #f3f4f5;
+// text=> text-color-dark | important-text-color-dark | reverse-text-color-dark
+// background=> background-color-dark | important-background-color-dark | reverse-background-color-dark
+// background=> background-color-dark | important-background-color-dark | reverse-background-color-dark
 $background-color-dark: #000000;
 $secondary-color-dark: #2b2b2b;
 $important-color-dark: #FEBE10;
 $hover-color-dark: #FEBE10;
+$hover-selectors-dark: #f3f4f5;
 
 $text-color-light: #1a1a1a;
 $background-color-light: white;
 $secondary-color-light: #f5f5fa;
 $important-color-light: black;
 $hover-color-light: #2a45f0;
+$hover-selectors-light: #1a1a1a;
 
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +23,7 @@ $hover-color-light: #2a45f0;
         --secondary-color: #{$secondary-color-dark} !important;
         --important-color: #{$important-color-dark} !important;
         --hover-color: #{$hover-color-dark} !important;
+        --hover-select: #{$hover-selectors-dark} !important;
     }
 }
 @media (prefers-color-scheme: light){
@@ -28,6 +33,7 @@ $hover-color-light: #2a45f0;
         --secondary-color: #{$secondary-color-light} !important;
         --important-color: #{$important-color-light} !important;
         --hover-color: #{$hover-color-light} !important;
+        --hover-select: #{$hover-selectors-light} !important;
     }
 }
 
@@ -37,6 +43,7 @@ body.light{
     --secondary-color: #{$secondary-color-light} !important;
     --important-color: #{$important-color-light} !important;
     --hover-color: #{$hover-color-light} !important;
+    --hover-select: #{$hover-selectors-light} !important;
 }
 body.dark{
     --text-color: #{$text-color-dark} !important;
@@ -44,4 +51,5 @@ body.dark{
     --secondary-color: #{$secondary-color-dark} !important;
     --important-color: #{$important-color-dark} !important;
     --hover-color: #{$hover-color-dark} !important;
+    --hover-select: #{$hover-selectors-dark} !important;
 }

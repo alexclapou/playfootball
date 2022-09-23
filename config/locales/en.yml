@@ -49,7 +49,7 @@ en:
     follow_us: Follow us
     motto: Football. Anywhere. Anytime.
   profile:
-    profile: Profile
+    account: Profile
     sign_in: Sign in
     lang_theme: Language & Display
     settings: Settings
@@ -60,3 +60,22 @@ en:
     auto: Auto
     dark: Dark
     light: Light
+  sign_in:
+    sign_in: Sign in
+    sign_with_app: Use one of the following applications to sign in into your PlayFootball account.
+    continue_with: Continue with %{social}
+    or: or
+    your_email: Your email
+    your_password: Your password
+    forgot_password: Forgot your password?
+    show_password: Show password
+    log_in: SIGN IN
+    no_acc: No account yet?
+    sign_up: Sign up
+  forgot_password:
+    question: Forgot password?
+    text: Enter your email to reset your password.
+    reset_text: SEND RESET LINK
+
+
+

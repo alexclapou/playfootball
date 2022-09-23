@@ -5,9 +5,14 @@ Rails.application.routes.draw do
     root 'pages#home'
     get 'dashboard', to: 'pages#dashboard'
     get 'search', to: 'pages#search'
-    # get 'profile', to: 'pages#profile'
 
-    get 'profile', to: 'users#show', as: :profile
-    resources :users, only: %i[show]
+    # profile page
+    get 'profile', to: 'profile#show'
+    get 'settings', to: 'profile#settings'
+    get 'language-and-theme', to: 'profile#language_and_display'
+
+    # change display theme
+    get '/display:theme', to: 'application#display', as: 'theme'
   end
+
 end

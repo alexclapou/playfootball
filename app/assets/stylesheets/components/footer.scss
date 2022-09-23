@@ -1,8 +1,9 @@
 .footer-custom{
     background-color: var(--secondary-color);
     bottom: 0;
-    width: 100%;
-    color: var(--text-color) !important;
+    width: 100vw; //fallback
+    max-width:100%;  /* added */
+     color: var(--text-color) !important;
     p{
         color: var(--text-color) !important;
     }

@@ -1,0 +1,80 @@
+.sign-in-form{
+    max-width: 25rem;
+    text-align: center;
+    margin: auto;
+    h2{
+        color: var(--text-color);
+        font-weight: bold !important;
+    }
+    .field{
+            padding-top: 1rem;
+            text-align: left;
+        label{
+            color: var(--text-color) !important;
+            font-size: .9rem;
+        }
+        .form-control{
+            margin-top: 4px;
+        }
+        .forgot-pass{
+            color: var(--text-color);
+            text-decoration: underline !important;
+            font-size: .9rem;
+        }
+        .form-check-input{
+            margin-right: .5rem;
+            font-size: 1.3rem;
+        }
+        .show-pass{
+            display: flex;
+            align-items: center !important;
+            .form-check-input{
+                margin-top: 0;
+                label{
+                    font-size: .9rem !important;
+                }
+            }
+        }
+    }
+    .actions{
+        .sign-button{
+            margin-top: 40px;
+        }
+    }
+    .sign-social-app{
+        color: var(--text-color) !important;
+        margin: 1rem 0 2rem 0;
+        .social-app-button{
+            .text{
+                a{
+                color: red;
+            }
+        }
+        }
+    }
+    .lines-or-div{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        .or{
+            padding: .5rem 1rem .2 1rem;
+            color: var(--text-color);
+            font-weight: 300 !important;
+        }
+        .line{
+            height: .01rem;
+            width: 100%;
+            background-color: var(--secondary-color);
+        }
+    }
+    .no-acc{
+        margin-top: 2rem;
+        padding: 1rem;
+        font-weight: 300 !important;
+        a{
+            color: var(--text-color) !important;
+            text-decoration: underline !important;
+        }
+        color: var(--text-color) !important;
+    }
+}

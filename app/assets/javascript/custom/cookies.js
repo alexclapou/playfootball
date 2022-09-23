@@ -12,4 +12,4 @@ export function getCookie(cname) {
       }
     }
     return "";
-  }
+}

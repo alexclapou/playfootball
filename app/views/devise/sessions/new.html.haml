@@ -1,17 +1,46 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
+.sign-in-form
+  %h2
+    =t('sign_in.sign_in', sign: 'sign in')
+  .sign-social-app
+    =t('sign_in.sign_with_app')
+    .pb-4
+    =link_to profile_path do
+      .social-app-button
+        %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
+          %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
+          %path{:d => "M19.876 28.584V18.79h2.703l.358-3.375h-3.061l.005-1.69c0-.88.083-1.35 1.347-1.35h1.69V9h-2.703c-3.248 0-4.39 1.637-4.39 4.39v2.026H13.8v3.375h2.024v9.793h4.052Z", :fill => "#3B5998"}
+        .text
+          =t('sign_in.continue_with', social: 'Facebook')
+    =link_to new_user_session_path do
+      .social-app-button
+        %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
+          %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
+          %path{"clip-rule" => "evenodd", :d => "M21.95 7.2c.189 1.28-.332 2.534-1.02 3.421-.735.952-2.003 1.688-3.23 1.65-.225-1.226.35-2.489 1.048-3.337.766-.937 2.079-1.656 3.202-1.734Zm3.689 18.017c.633-.97.87-1.46 1.361-2.555-3.574-1.36-4.147-6.441-.61-8.391-1.079-1.354-2.595-2.138-4.026-2.138-1.031 0-1.738.27-2.38.514-.535.204-1.026.39-1.623.39-.645 0-1.216-.204-1.814-.419-.657-.235-1.347-.482-2.202-.482-1.606 0-3.316.98-4.4 2.659-1.523 2.362-1.264 6.805 1.207 10.589.883 1.354 2.063 2.876 3.607 2.89.64.006 1.066-.186 1.527-.392.528-.237 1.102-.494 2.095-.5.999-.006 1.564.255 2.084.495.45.207.866.4 1.501.393 1.545-.013 2.79-1.7 3.673-3.053Z", :fill => "#1A1A24", "fill-rule" => "evenodd"}
+        .text
+          =t('sign_in.continue_with', social: 'Apple')
+  .lines-or-div
+    .line
+    .or
+      =t('sign_in.or')
+    .line
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+      = f.label t('sign_in.your_email')
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'
+    .field
+      = f.label t('sign_in.your_password')
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control'
+    .field
+      =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
+    .field
+      .show-pass
+        %input#showPassword.form-check-input{:type => "checkbox", :value => ""}/
+        %label.form-check-label{:for => "showPassword"}
+          =t('sign_in.show_password')
+    .actions
+      = f.submit t('sign_in.log_in'), class: 'sign-button'
+  .no-acc
+    =t('sign_in.no_acc')
+    =link_to t('sign_in.sign_up'), new_user_registration_path

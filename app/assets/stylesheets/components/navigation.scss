@@ -6,11 +6,6 @@
     .bottom-navigation{
         background-color: var(--secondary-color) !important;
         text-align: center;
-        // .hover-link{
-        //     &:hover{
-        //         // background-color: red;
-        //     }
-        // }
         svg{
             cursor: pointer;
             fill: var(--text-color);
@@ -48,7 +43,7 @@
                     font-weight: 500 !important;
                     padding-left: 0rem !important;
                     padding-right: 0rem !important;
-                    color: var(--text-color) !important;
+                    color: var(--text-color);
                 }
             }
             .desktop-logo{

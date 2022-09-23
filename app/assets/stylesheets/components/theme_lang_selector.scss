@@ -1,16 +1,4 @@
 .profile-tabs{
-    color: var(--text-color);
-    .items-profile-tabs{
-        border-bottom: 1px solid var(--secondary-color);
-        padding-bottom: 1rem;
-    }
-    .tab-link{
-        text-decoration: none;
-        padding: 0 1.1rem 0 0;
-        color: var(--text-color);
-        font-size: 1.1rem;
-        font-weight: 300 !important;
-    }
     .theme-div{
         input{
             box-shadow: none !important;
@@ -29,8 +17,17 @@
             a{
                 color: var(--text-color) !important;
             }
-            .selector{
+            label{
                 margin-top: 1rem;
+
+            }
+            
+            .selector{
+                border-radius: 5px;
+                &:hover{
+                    border: 1px solid var(--hover-select);
+                    transition: border .35s ease-in-out;
+                }
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
@@ -51,6 +48,10 @@
                         outline: none !important;
                     }
                 }
+            }
+            .selector.active{
+                border: 2px solid var(--important-color);
+                font-weight: bold !important;
             }
         }
     }

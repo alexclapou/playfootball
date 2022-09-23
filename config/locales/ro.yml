@@ -18,7 +18,7 @@ ro:
     follow_us: Urmareste-ne
     motto: Fotbal. Oriunde. Oricand
   profile:
-    profile: Profil
+    account: Profil
     sign_in: Conecteaza-te
     lang_theme: Limba & Afisare
     settings: Setari
@@ -29,3 +29,20 @@ ro:
     auto: Automat
     dark: Intunecat
     light: Luminos
+  sign_in:
+    sign_in: Logheaza-te
+    sign_with_app: Foloseste una din urmatoarele aplicatii pentru a te contecta la contul tau PlayFootball.
+    continue_with: Continua cu %{social}
+    or: sau
+    your_email: Email
+    your_password: Parola
+    forgot_password: Ai uitat parola?
+    show_password: Afiseaza parola
+    log_in: Autentificare
+    no_acc: Nu ai cont?
+    sign_up: Creează
+  forgot_password:
+    question: Ai uitat parola?
+    text: Introdu email-ul pentru a reseta parola
+    reset_text: TRIMITE LINK
+
