@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
+
+
   private
 
   def always_set_locale
@@ -25,5 +27,13 @@ class ApplicationController < ActionController::Base
   def extract_locale
     parsed_locale = params[:locale]
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
+
+  def after_sign_out_path_for(resource)
+    root_path
+  end
+  
+  def after_sign_in_path_for(resource)
+    profile_path
   end
 end

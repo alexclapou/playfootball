@@ -1,24 +1,28 @@
-.sign-in-form{
-    .sign-button{
-        background-color: var(--reverse-background-color) !important;
-        color: var(--reverse-text-color) !important;
-        width: 100%;
-        height: 3rem;
-        border: 0;
-        border-radius: 4px;
-        font-weight: bold !important;
-        font-size: .875rem;
-    }
-    input[disabled="disabled"] {
-        cursor: not-allowed !important; 
-        background-color: var(--secondary-background-color) !important;
-        color: var(--primary-text-color) !important;
-    }
+.sign-button{
+    background-color: var(--reverse-background-color) !important;
+    color: var(--reverse-text-color) !important;
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold !important;
+    font-size: .875rem;
+}
+
+input[disabled="disabled"] {
+    cursor: not-allowed !important; 
+    background-color: var(--secondary-background-color) !important;
+    color: var(--primary-text-color) !important;
 }
 
 
-
-
+.field-text-input{
+    border: 1px solid var(--reverse-background-color) !important;
+    background-color: var(--primary-background-color) !important;
+    color: var(--primary-text-color) !important;
+    height: 2.75rem;
+    font-weight: 300 !important;
+}
 
 .social-app-button{
     padding: .4rem;

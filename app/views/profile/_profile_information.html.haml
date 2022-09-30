@@ -1,0 +1,10 @@
+- if user_signed_in?
+  %h3
+    = current_user.email
+  %p.mx-0.my-0{style: 'margin-top: -8px !important;'}
+    = link_to t('profile.sign_out'), destroy_user_session_path, class: 'sign-in-text', data: { turbo_method: :delete }
+- else
+  %h3
+    =t('profile.profile')
+  %p.mx-0.my-0{style: 'margin-top: -8px !important;'}
+    = link_to t('profile.sign_in'), new_user_session_path, class: 'sign-in-text'

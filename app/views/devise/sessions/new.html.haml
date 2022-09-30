@@ -26,12 +26,10 @@
   = form_for(resource, as: resource_name, url: session_path(resource_name), data: {controller: "signform"}, html: {novalidate: true}) do |f|
     .field
       = f.label t('sign_in.your_email')
-      %br/
-    = f.email_field :email, autocomplete: "email", class: 'form-control'
+    = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input'
     .field
       = f.label t('sign_in.your_password')
-      %br/
-      = f.password_field :password, autocomplete: "current-password", class: 'form-control', id: "sh-ps", required: true
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", required: true
     .field
       =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
     .field

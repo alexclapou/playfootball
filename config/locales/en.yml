@@ -51,6 +51,7 @@ en:
   profile:
     account: Profile
     sign_in: Sign in
+    sign_out: Sign out
     lang_theme: Language & Display
     settings: Settings
     language: Language
