@@ -6,11 +6,8 @@
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
     = csrf_meta_tags
     = csp_meta_tag
-    -# - if cookies[:theme] == 'dark'
-    -#   = stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload'
-    -# - else
-    -#   = stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload"
+    %meta{:content => "no-cache", :name => "turbo-cache-control"}/
     = javascript_importmap_tags
     =favicon_link_tag 'favicon.ico'
     %link{:href => "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css", :rel => "stylesheet"}/
@@ -20,6 +17,6 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
   %body.pb-md-0.pb-3{class: cookies[:theme]}
     =render partial: 'shared/navigation'
-    .container.pt-5{style:'min-height: 92vh !important;'}
+    .container.pt-5{style:'min-height: 94vh !important;'}
       = yield
     =render partial: 'shared/footer'

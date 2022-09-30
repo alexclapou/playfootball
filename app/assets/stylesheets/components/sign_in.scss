@@ -3,21 +3,21 @@
     text-align: center;
     margin: auto;
     h2{
-        color: var(--text-color);
+        color: var(--primary-text-color);
         font-weight: bold !important;
     }
     .field{
             padding-top: 1rem;
             text-align: left;
         label{
-            color: var(--text-color) !important;
+            color: var(--primary-text-color) !important;
             font-size: .9rem;
         }
         .form-control{
             margin-top: 4px;
         }
         .forgot-pass{
-            color: var(--text-color);
+            color: var(--primary-text-color);
             text-decoration: underline !important;
             font-size: .9rem;
         }
@@ -30,8 +30,15 @@
             align-items: center !important;
             .form-check-input{
                 margin-top: 0;
+                background-color: var(--primary-background-color) !important;
+                border: 1px solid var(--reverse-background-color);
+                accent-color: red !important;
                 label{
                     font-size: .9rem !important;
+                }
+                &:checked{
+                    background-color: var(--reverse-background-color) !important; 
+                    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath **fill='%23000'** d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
                 }
             }
         }
@@ -42,7 +49,7 @@
         }
     }
     .sign-social-app{
-        color: var(--text-color) !important;
+        color: var(--primary-text-color) !important;
         margin: 1rem 0 2rem 0;
         .social-app-button{
             .text{
@@ -57,14 +64,14 @@
         text-align: center;
         align-items: center;
         .or{
-            padding: .5rem 1rem .2 1rem;
-            color: var(--text-color);
-            font-weight: 300 !important;
+            padding: .3rem 1rem .5rem 1rem !important;
+            color: var(--secondary-text-color);
+            font-weight: 500 !important;
         }
         .line{
             height: .01rem;
             width: 100%;
-            background-color: var(--secondary-color);
+            background-color: var(--divide-color);
         }
     }
     .no-acc{
@@ -72,9 +79,9 @@
         padding: 1rem;
         font-weight: 300 !important;
         a{
-            color: var(--text-color) !important;
+            color: var(--primary-text-color) !important;
             text-decoration: underline !important;
         }
-        color: var(--text-color) !important;
+        color: var(--primary-text-color) !important;
     }
 }

@@ -1,7 +1,7 @@
 .profile-photo-name{
-    color: var(--text-color) !important;
+    color: var(--primary-text-color) !important;
     .circle{
-        background: var(--secondary-color);
+        background: var(--secondary-background-color);
         width: 3.5rem; 
         height: 3.5rem;
         border-radius: 50%;
@@ -9,7 +9,7 @@
         align-items: center; 
         justify-content: center;
         svg{
-            fill: var(--text-color);
+            fill: var(--primary-text-color);
         }
         .inside-circle{
             height: 10rem !important;
@@ -20,7 +20,7 @@
         flex-direction: column;
         padding-left: 1rem !important;
         .sign-in-text{
-            color: var(--text-color) !important;
+            color: var(--primary-text-color) !important;
             margin-top: -.5rem !important;
             text-decoration: underline !important;
             font-weight: 300 !important;
@@ -29,9 +29,9 @@
 }
 
 .profile-tabs{
-    color: var(--text-color);
+    color: var(--primary-text-color);
     .items-profile-tabs{
-        border-bottom: 1px solid var(--secondary-color);
+        border-bottom: 1px solid var(--divide-color);
         .nav-item{
             cursor: pointer;
             margin-right: 1rem;
@@ -43,12 +43,13 @@
             .tab-link{
                 text-decoration: none;
                 padding: 0 1.1rem 0 0;
-                color: var(--text-color);
-                font-size: 1.1rem;
+                color: var(--primary-text-color);
+                font-weight: 200 !important;
+                font-size: 1rem;
                 &.active{
                     padding-right: 0;
                     font-weight: bold !important;
-                    box-shadow: inset 0 -2px var(--text-color);
+                    box-shadow: inset 0 -2px var(--primary-text-color);
                 }
             }
        }

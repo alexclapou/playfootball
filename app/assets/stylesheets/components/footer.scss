@@ -1,19 +1,19 @@
 .footer-custom{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-background-color);
     bottom: 0;
     width: 100vw; //fallback
     max-width:100%;  /* added */
-     color: var(--text-color) !important;
+     color: var(--primary-text-color) !important;
     p{
-        color: var(--text-color) !important;
+        color: var(--secondary-text-color) !important;
     }
     a{
         font-weight: 300 !important;
         font-size: 13px !important;
         text-decoration: none;
-        color: var(--text-color) !important;
+        color: var(--primary-text-color) !important;
         &:hover{
-            color: var(--hover-color) !important;
+            color: var(--hover-text-color) !important;
             transition: color .2s ease-in-out;
         }
     }

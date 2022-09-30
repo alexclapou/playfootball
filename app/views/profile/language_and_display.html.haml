@@ -23,19 +23,19 @@
     .row.pt-2
       .theme-lang-selector.col-md-4.col-sm-5.col-6
         %label{:for => "auto-theme"}
-          =link_to theme_path(theme: :auto) do
+          =link_to theme_path(theme: :auto), { turbo: "false" } do
             .selector{class: cookies[:theme] == 'auto' ? 'active' : ''}
               =t('profile.auto')
               %input{:name => "theme-radio", :id => "auto-theme", :type => "radio", :value => "auto",  :checked => cookies[:theme] == 'auto', :class => "choose-theme form-check-input theme-selector-boxes"}
       .theme-lang-selector.col-md-4.col-sm-5.col-6
         %label{:for => "dark-theme"}
-          =link_to theme_path(theme: :dark) do
+          =link_to theme_path(theme: :dark), { turbo: "false" } do
             .selector{class: cookies[:theme] == 'dark' ? 'active' : ''}
               =t('profile.dark')
               %input{:name => "theme-radio", :id => "dark-theme", :type => "radio", :value => "dark", :checked => cookies[:theme] == 'dark', :class => "choose-theme form-check-input theme-selector-boxes"} 
       .theme-lang-selector.col-md-4.col-sm-5.col-6
         %label{:for => "light-theme"}
-          =link_to theme_path(theme: :light) do
+          =link_to theme_path(theme: :light), { turbo: "false" } do
             .selector{class: cookies[:theme] == 'light' ? 'active' : ''}
               =t('profile.light')
               %input{:name => "theme-radio", :id => "light-theme", :type => "radio", :value => "light", :checked => cookies[:theme] == 'light', :class => "choose-theme form-check-input theme-selector-boxes"} 

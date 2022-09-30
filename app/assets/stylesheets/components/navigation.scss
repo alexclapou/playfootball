@@ -2,30 +2,30 @@
 
 
 .mobile-navigation{
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--divide-color);
     .bottom-navigation{
-        background-color: var(--secondary-color) !important;
+        background-color: var(--secondary-background-color) !important;
         text-align: center;
         svg{
             cursor: pointer;
-            fill: var(--text-color);
+            fill: var(--primary-text-color);
         }
         .active{
             padding-top: .55rem !important;
-            box-shadow: inset 0 2px var(--text-color);
+            box-shadow: inset 0 2px var(--primary-text-color);
             path{
-                fill: var(--text-color);
+                fill: var(--primary-text-color);
             }
         }
     }
 }
 
 .full-desktop-navigation{
-    background-color: var(--background-color) !important;
+    background-color: var(--primary-background-color) !important;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--divide-color) !important;
     .desktop-navigation{
         padding-top: 0 !important;
         padding-bottom: 0 !important;
@@ -38,12 +38,13 @@
                 cursor: pointer;
                 margin-right: 1rem;
                 padding-top: 1.1rem !important;
-                padding-bottom: 1.1rem !important;
+                padding-bottom: 1rem !important;
                 .nav-link{
+                    margin-bottom: 1px; // if nav links are strange are bcs of this
                     font-weight: 500 !important;
                     padding-left: 0rem !important;
                     padding-right: 0rem !important;
-                    color: var(--text-color);
+                    color: var(--primary-text-color);
                 }
             }
             .desktop-logo{
@@ -52,27 +53,27 @@
           .separate-line{
             margin-top: 1rem;
             margin-bottom: 1rem;
-            border-left: 1px solid var(--secondary-color);
+            border-left: 1px solid var(--divide-color);
             margin-right: 2rem;
           }
         }
         .circle{
             height: 2.55rem;
             width: 2.55rem;
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-background-color);
             border-radius: 50%;
             display: flex; /* or inline-flex */
             align-items: center; 
             justify-content: center;
             svg{
                 cursor: pointer;
-                fill: var(--text-color);
+                fill: var(--primary-text-color);
             }
         }
         .active{
-            box-shadow: inset 0 -2px 0  var(--important-color);
+            box-shadow: inset 0 -2px 0  var(--accent-color);
             a{
-                color: var(--important-color) !important;
+                color: var(--accent-color) !important;
             }
             cursor: pointer;
             transition: box-shadow .2s ease-in-out;
@@ -80,7 +81,7 @@
         }
         .not-active{
             &:hover{
-                box-shadow: inset 0 -2px 0  var(--secondary-color);
+                box-shadow: inset 0 -2px 0  var(--divide-color);
                 transition: box-shadow .2s ease-in-out;
             }   
         }

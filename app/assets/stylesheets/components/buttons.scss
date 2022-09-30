@@ -1,24 +1,31 @@
-.sign-button{
-    background-color: var(--text-color);
-    color: var(--background-color);
-    width: 100%;
-    opacity: .6;
-    height: 3rem;
-    border: 0;
-    border-radius: 4px;
-    font-weight: bold !important;
-    font-size: .875rem;
+.sign-in-form{
+    .sign-button{
+        background-color: var(--reverse-background-color) !important;
+        color: var(--reverse-text-color) !important;
+        width: 100%;
+        height: 3rem;
+        border: 0;
+        border-radius: 4px;
+        font-weight: bold !important;
+        font-size: .875rem;
+    }
+    input[disabled="disabled"] {
+        cursor: not-allowed !important; 
+        background-color: var(--secondary-background-color) !important;
+        color: var(--primary-text-color) !important;
+    }
 }
+
+
+
 
 
 .social-app-button{
     padding: .4rem;
-    // background-color: var(--secondary-color);
-    // background-color: red;
     width: 100%;
     margin-top: .7rem !important;
     border: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-background-color);
     border-radius: 4px;
     display: grid;
     grid-template-columns: -webkit-max-content 1fr;
@@ -27,13 +34,17 @@
     justify-items: left;
     grid-gap: .875em;
     gap: .875em;
-    padding-left: 21%;
+        padding-left: 21%;
     &:hover{
-        background-color: black;
+        background-color: var(--reverse-background-color) !important;
         text-align: center;
         color: white;
+        .text{
+            color: var(--reverse-text-color) !important
+        }
+    
     }
     .text{
-        color: var(--text-color);
+        color: var(--primary-text-color);
     }
 }
