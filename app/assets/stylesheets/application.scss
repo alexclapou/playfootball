@@ -35,10 +35,6 @@ input[disabled="disabled"] {
     box-shadow: 0 0 0 rgb(255, 255, 255) !important;
 }
 
-a:focus{
-    outline: var(--reverse-background-color) solid 1.5px !important; 
-}
-
 .field-text-input{
     border: 1px solid var(--reverse-background-color) !important;
     background-color: var(--primary-background-color) !important;

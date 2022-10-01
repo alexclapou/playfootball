@@ -16,3 +16,9 @@ test:
 
 production:
   <<: *default
+  username: db-playfootball-prod
+  password: AVNS_spgy59sP2u5cZBkaP3t
+  host     : app-766efa18-60be-43a1-9294-61d04776b54f-do-user-12551161-0.b.db.ondigitalocean.com
+  port     : 25060
+  database : db-playfootball-prod
+  sslmode  : require
