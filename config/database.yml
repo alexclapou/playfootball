@@ -15,9 +15,11 @@ test:
   database: playfootball_test
 
 production:
-  <<: *default
-  host     : app-766efa18-60be-43a1-9294-61d04776b54f-do-user-12551161-0.b.db.ondigitalocean.com
-  port     : 25060
-  username : db-playfootball-prod
-  password : AVNS_uFhtBoBablqWRSP4SgW
-  database : db-playfootball-prod
+  pool: 10
+  timeout: 10000
+  username: doadmin
+  password: AVNS_lGioRqOLD1a4wXulRAN
+  host: db-postgresql-fra1-88312-do-user-12551161-0.b.db.ondigitalocean.com
+  port: 25060
+  database: defaultdb
+  sslmode: require
