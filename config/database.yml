@@ -15,7 +15,7 @@ test:
   database: playfootball_test
 
 production:
-  adapter: postgresql
+  <<: *default
   host     : app-766efa18-60be-43a1-9294-61d04776b54f-do-user-12551161-0.b.db.ondigitalocean.com
   port     : 25060
   username : db-playfootball-prod
