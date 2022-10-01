@@ -6,7 +6,8 @@ export default class extends Controller {
 
   connect() {
     this.isValidCombination()
-    this.wrongCredentials()
+    if(this.wrongCredentials())
+      this.markInvalidCredentials()
   }
 
   isValidEmail(){
@@ -15,21 +16,29 @@ export default class extends Controller {
       this.emailInputTarget.classList.remove('warning-label')
       return true
     }
+    if(this.wrongCredentials()){
+      this.emailTarget.classList.add('warning-input')
+      this.emailInputTarget.classList.add('warning-label')
+    }
     return false
   }
 
   isValidPassword(){
+    //
     if(this.passwordTarget.value){
       this.passwordTarget.classList.remove('warning-input')
       this.passwordInputTarget.classList.remove('warning-label')
       return true
     }
+    if(this.wrongCredentials()){
+      this.passwordTarget.classList.add('warning-input')
+      this.passwordInputTarget.classList.add('warning-label')
+    }
     return false
   }
 
   wrongCredentials(){
-    if(document.getElementById('warningId'))
-      this.markInvalidCredentials()
+    return document.getElementById('warningId') != null
   }
   
   markInvalidCredentials(){
