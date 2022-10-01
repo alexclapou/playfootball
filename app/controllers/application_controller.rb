@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :set_locale
+  before_action :set_locale, :always_set_locale
   
   def display
     cookies[:theme] = {
@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # def always_set_locale
-  #   redirect_to "/#{I18n.locale}#{request.path_info}" if params[:locale].blank?
-  # end
+  def always_set_locale
+    redirect_to "/#{I18n.locale}#{request.path_info}" if params[:locale].blank?
+  end
   
   def set_locale
     I18n.locale = extract_locale || I18n.default_locale
