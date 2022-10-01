@@ -1,7 +1,7 @@
 .mobile-navigation.d-md-none
   .d-flex.justify-content-center.sticky-top.py-4
     =link_to root_path, class:'d-flex align-items-center' do
-      =image_tag "logor", :style=>'width: 8em;'
+      =image_tag "logor.png", :style=>'width: 8em;'
   .row.fixed-bottom.bottom-navigation
     -unless current_page?(root_path)
       .col-3{style: 'padding: .55rem;'}
