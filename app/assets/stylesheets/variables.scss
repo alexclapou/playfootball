@@ -18,6 +18,9 @@ $primary-background-color-light: white;
 $secondary-background-color-light: #f5f5fa;
 $reverse-background-color-light: #1a1a1a;
 
+$warning-color: #E97451;
+$info-color: white;
+
 
 @media (prefers-color-scheme: dark) {
     body{
@@ -67,4 +70,8 @@ body.dark{
     --primary-background-color: #{$primary-background-color-dark} !important;
     --secondary-background-color: #{$secondary-background-color-dark} !important;
     --reverse-background-color: #{$reverse-background-color-dark} !important;
+}
+
+*{
+    --warning-color: #{$warning-color} !important;
 }

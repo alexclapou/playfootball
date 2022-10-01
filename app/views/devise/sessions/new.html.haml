@@ -26,13 +26,15 @@
   -# = form_for(resource, as: resource_name, url: session_path(resource_name), local: true, data: { turbo: false, controller: "signform" }, html: {novalidate: true}) do |f|
   -# =turbo_frame_tag "post" do
   = form_for(resource, as: resource_name, url: session_path(resource_name), 
-            data: { controller: "signform", action: 'ajax:success->signform#sbmt ajax:error->signform#sbmt' },
+            data: { controller: "signform" },
             html: {novalidate: true}) do |f|
+    - if flash[:alert]
+      = render 'shared/warning_messages', data: {signform_target: 'warning'}, messages: flash[:alert]
     .field
-      = f.label t('sign_in.your_email')
+      = f.label t('sign_in.your_email'), data: {signform_target: 'emailInput'}
       = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signform_target: 'email', action: 'signform#isValidCombination' }
     .field
-      = f.label t('sign_in.your_password')
+      = f.label t('sign_in.your_password'), data: {signform_target: 'passwordInput'}
       = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signform_target: 'password', action: 'signform#isValidCombination' }
     .field
       =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
