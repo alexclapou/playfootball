@@ -2,5 +2,6 @@
 
 import "@hotwired/turbo-rails"
 import "controllers"
-import "./custom/theme"
-import "./custom/sign_in"
+import "custom/cookies"
+import "custom/theme"
+import "custom/sign_in"
