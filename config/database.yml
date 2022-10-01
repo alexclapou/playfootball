@@ -25,4 +25,3 @@ production:
   username : db-playfootball-prod
   password : AVNS_uFhtBoBablqWRSP4SgW
   database : db-playfootball-prod
-  sslmode  : require
