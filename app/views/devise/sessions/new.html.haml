@@ -24,25 +24,25 @@
       =t('sign_in.or')
     .line
   -# = form_for(resource, as: resource_name, url: session_path(resource_name), local: true, data: { turbo: false, controller: "signform" }, html: {novalidate: true}) do |f|
-  =turbo_frame_tag "post" do
-    = form_for(resource, as: resource_name, url: session_path(resource_name), 
-              data: { controller: "signform", action: 'ajax:success->signform#sbmt ajax:error->signform#sbmt' },
-              html: {novalidate: true}) do |f|
-      .field
-        = f.label t('sign_in.your_email')
-        = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signform_target: 'email', action: 'signform#isValidCombination' }
-      .field
-        = f.label t('sign_in.your_password')
-        = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signform_target: 'password', action: 'signform#isValidCombination' }
-      .field
-        =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
-      .field
-        .show-pass
-          %input#showPassword.form-check-input.show_password{:name => 'show-pass', :type => "checkbox", :value => ""}/
-          %label.form-check-label{:for => "showPassword"}
-            =t('sign_in.show_password')
-      .actions
-        = f.submit t('sign_in.log_in'), class: "sign-button", data: { signform_target: 'button'}
-    .no-acc
-      =t('sign_in.no_acc')
-      =link_to t('sign_in.sign_up'), new_user_registration_path
+  -# =turbo_frame_tag "post" do
+  = form_for(resource, as: resource_name, url: session_path(resource_name), 
+            data: { controller: "signform", action: 'ajax:success->signform#sbmt ajax:error->signform#sbmt' },
+            html: {novalidate: true}) do |f|
+    .field
+      = f.label t('sign_in.your_email')
+      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signform_target: 'email', action: 'signform#isValidCombination' }
+    .field
+      = f.label t('sign_in.your_password')
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signform_target: 'password', action: 'signform#isValidCombination' }
+    .field
+      =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
+    .field
+      .show-pass
+        %input#showPassword.form-check-input.show_password{:name => 'show-pass', :type => "checkbox", :value => ""}/
+        %label.form-check-label{:for => "showPassword"}
+          =t('sign_in.show_password')
+    .actions
+      = f.submit t('sign_in.log_in'), class: "sign-button", data: { signform_target: 'button'}
+  .no-acc
+    =t('sign_in.no_acc')
+    =link_to t('sign_in.sign_up'), new_user_registration_path
