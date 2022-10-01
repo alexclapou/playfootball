@@ -45,3 +45,14 @@ input[disabled="disabled"] {
         box-shadow: -3px 0 var(--reverse-background-color) !important;
     }
 }
+
+.warning-input{
+    border: 1px solid var(--warning-color) !important;
+    &:focus{
+        box-shadow: -3px 0 var(--warning-color) !important;
+    }
+}
+
+.warning-label{
+    color: var(--warning-color) !important
+}
