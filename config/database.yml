@@ -15,13 +15,12 @@ test:
   database: playfootball_test
 
 production:
-  <<: *default
-  # adapter: postgresql
-  # pool: 10
-  # timeout: 10000
-  # username: doadmin
-  # password: AVNS_lGioRqOLD1a4wXulRAN
-  # host: db-postgresql-fra1-88312-do-user-12551161-0.b.db.ondigitalocean.com
-  # port: 25060
-  # database: defaultdb
-  # sslmode: require
+  adapter: postgresql
+  pool: 10
+  timeout: 10000
+  username: doadmin
+  password: AVNS_lGioRqOLD1a4wXulRAN
+  host: db-postgresql-fra1-88312-do-user-12551161-0.b.db.ondigitalocean.com
+  port: 25060
+  database: defaultdb
+  sslmode: require
