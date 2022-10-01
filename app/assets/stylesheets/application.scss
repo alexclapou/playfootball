@@ -26,3 +26,26 @@
 body{
     background-color: var(--primary-background-color) !important;
 }
+
+input[disabled="disabled"] {
+    cursor: not-allowed !important; 
+    background-color: var(--secondary-background-color) !important;
+    color: var(--primary-text-color) !important;
+    outline-width: 0 !important;
+    box-shadow: 0 0 0 rgb(255, 255, 255) !important;
+}
+
+a:focus{
+    outline: var(--reverse-background-color) solid 1.5px !important; 
+}
+
+.field-text-input{
+    border: 1px solid var(--reverse-background-color) !important;
+    background-color: var(--primary-background-color) !important;
+    color: var(--primary-text-color) !important;
+    height: 2.75rem;
+    font-weight: 300 !important;
+    &:focus{
+        box-shadow: -3px 0 var(--reverse-background-color) !important;
+    }
+}

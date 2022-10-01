@@ -1,15 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
-
+import { validEmail } from "helpers/email_helper"
 export default class extends Controller {
   static targets = ['email', 'button']
 
   connect() {
-    this.buttonTarget.setAttribute('disabled', 'disabled')
+    this.isValidEmail()
   }
 
   isValidEmail(){
-    const match = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-    if(match.test(this.emailTarget.value.toLowerCase()))
+    if(validEmail(this.emailTarget.value.toLowerCase()))
       this.buttonTarget.disabled = false
     else
       this.buttonTarget.setAttribute('disabled', 'disabled')

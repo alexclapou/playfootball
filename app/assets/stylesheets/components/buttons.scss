@@ -9,21 +9,6 @@
     font-size: .875rem;
 }
 
-input[disabled="disabled"] {
-    cursor: not-allowed !important; 
-    background-color: var(--secondary-background-color) !important;
-    color: var(--primary-text-color) !important;
-}
-
-
-.field-text-input{
-    border: 1px solid var(--reverse-background-color) !important;
-    background-color: var(--primary-background-color) !important;
-    color: var(--primary-text-color) !important;
-    height: 2.75rem;
-    font-weight: 300 !important;
-}
-
 .social-app-button{
     padding: .4rem;
     width: 100%;
@@ -38,7 +23,7 @@ input[disabled="disabled"] {
     justify-items: left;
     grid-gap: .875em;
     gap: .875em;
-        padding-left: 21%;
+    padding-left: 21%;
     &:hover{
         background-color: var(--reverse-background-color) !important;
         text-align: center;
@@ -46,7 +31,6 @@ input[disabled="disabled"] {
         .text{
             color: var(--reverse-text-color) !important
         }
-    
     }
     .text{
         color: var(--primary-text-color);

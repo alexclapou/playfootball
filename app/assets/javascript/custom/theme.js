@@ -5,7 +5,6 @@ if(getCookie('theme') == ''){
     document.cookie = 'theme=auto;path=/'
 }
 
-
 document.addEventListener("turbo:before-cache", function() {
     // const flash_message_element = document.querySelector(".flash")
     // if (flash_message_element) {

@@ -7,7 +7,6 @@
     = render "devise/shared/error_messages", resource: resource
     .field
       = f.label t('sign_in.your_email')
-      %br/
       = f.email_field :email, class: 'form-control field-text-input', data: { resetpass_target: 'email', action: 'resetpass#isValidEmail' }
     .actions
       = f.submit t('forgot_password.reset_text'), class: 'sign-button', data: { resetpass_target: 'button' }
