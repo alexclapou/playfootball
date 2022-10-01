@@ -24,7 +24,6 @@ export default class extends Controller {
   }
 
   isValidPassword(){
-    //
     if(this.passwordTarget.value){
       this.passwordTarget.classList.remove('warning-input')
       this.passwordInputTarget.classList.remove('warning-label')
