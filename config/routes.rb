@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
+    devise_for :users, controllers: {
+      sessions: 'users/sessions',
+    }, skip: :omniauth_callbacks 
 
     root 'pages#home'
     get 'dashboard', to: 'pages#dashboard'
@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     get '/display:theme', to: 'application#display', as: 'theme'
   end
 
+  # omniauth
+  devise_for :users, only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 end

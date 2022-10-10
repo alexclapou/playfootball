@@ -9,15 +9,18 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { locale: I18n.locale }
+    if controller_name != 'omniauth_callbacks'
+      { locale: I18n.locale }
+    end
+    {}
   end
-
-
 
   private
 
   def always_set_locale
-    redirect_to "/#{I18n.locale}#{request.path_info}" if params[:locale].blank?
+    if controller_name != 'omniauth_callbacks'
+      redirect_to "/#{I18n.locale}#{request.path_info}" if params[:locale].blank?
+    end
   end
   
   def set_locale
