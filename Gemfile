@@ -19,6 +19,9 @@ gem 'rubocop'
 
 gem 'devise'
 
+gem "omniauth-facebook"
+gem "omniauth-rails_csrf_protection"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

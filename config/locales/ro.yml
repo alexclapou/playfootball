@@ -1,42 +1,42 @@
 ro:
   navigation:
-    home: Acasa
+    home: Acasă
     dashboard: Bord
   footer:
     quick_links: Link-uri rapide
-    news: Stiri
-    all_competitions: Toate competitiile
+    news: Știri
+    all_competitions: Toate competițiile
     all_teams: Toate echipele
-    all_players: Toti jucatorii
-    play: Joaca
+    all_players: Toți jucătorii
+    play: Joacă
     nearby_matches: Meciuri in apropiere
     sports_ground: Baze sportive
     about: Despre
     store: Magazin
     company: Companie
     contact: Contact
-    follow_us: Urmareste-ne
-    motto: Fotbal. Oriunde. Oricand
+    follow_us: Urmăreste-ne
+    motto: Fotbal. Oriunde. Oricând
   profile:
     account: Profil
-    sign_in: Conecteaza-te
-    sign_out: Deconecteaza-te
-    lang_theme: Limba & Afisare
-    settings: Setari
-    language: Limba
+    sign_in: Conectează-te
+    sign_out: Deconectează-te
+    lang_theme: Limbă & Afișare
+    settings: Setări
+    language: Limbă
     en: English
     ro: Română
-    display_mode: Mod de afisare
+    display_mode: Mod de afișare
     auto: Automat
-    dark: Intunecat
+    dark: Întunecat
     light: Luminos
   sign_in:
-    sign_in: Logheaza-te
-    sign_with_app: Foloseste una din urmatoarele aplicatii pentru a te contecta la contul tau PlayFootball.
-    continue_with: Continua cu %{social}
+    sign_in: Loghează-te
+    sign_with_app: Folosește una din următoarele aplicații pentru a te contecta la contul tău PlayFootball.
+    continue_with: Continuă cu %{social}
     or: sau
     your_email: Email
-    your_password: Parola
+    your_password: Parolă
     forgot_password: Ai uitat parola?
     show_password: Afiseaza parola
     log_in: Autentificare
