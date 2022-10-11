@@ -68,6 +68,7 @@ en:
     or: or
     your_email: Your email
     your_password: Your password
+    password_confirmation: Password confirmation
     forgot_password: Forgot your password?
     show_password: Show password
     log_in: SIGN IN
@@ -77,6 +78,12 @@ en:
     question: Forgot password?
     text: Enter your email to reset your password.
     reset_text: SEND RESET LINK
-
-
-
+  sign_up:
+    create_account: Create Your Account
+    sign_with_app: Use one of the following applications to sign up on PlayFootball.
+    submit_create: Create Account
+    already_have_account: Already have an account?
+    sign_in: Sign in
+    fname: First Name
+    lname: Last Name
+    dob: Date of birth

@@ -42,6 +42,20 @@
                 }
             }
         }
+        .dob-picker{
+            display: flex;
+            gap: 10px;
+            select{
+                margin-top: 4px;
+                background-color: var(--primary-background-color) !important;
+                color: var(--primary-text-color) !important;
+                border-color: var(--primary-text-color) !important;
+                font-weight: 600 !important;
+                width: 100% !important;
+                padding: .3rem;
+                border-radius: .25rem;
+            }
+        }
     }
     .actions{
         .sign-button{
@@ -76,6 +90,10 @@
             width: 100%;
             background-color: var(--divide-color);
         }
+    }
+    .names-flex{
+        display: flex;
+        gap: 25px;
     }
     .no-acc{
         margin-top: 2rem;

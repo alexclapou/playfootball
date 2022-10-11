@@ -1,20 +1,60 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
+.sign-in-form
+  %h2
+    =t('sign_up.create_account')
+  .sign-social-app
+    =t('sign_up.sign_with_app')
+    %div{style: 'padding-top:2.5rem !important;'}
+    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"}, class: 'popup' do
+      .social-app-button
+        %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
+          %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
+          %path{:d => "M19.876 28.584V18.79h2.703l.358-3.375h-3.061l.005-1.69c0-.88.083-1.35 1.347-1.35h1.69V9h-2.703c-3.248 0-4.39 1.637-4.39 4.39v2.026H13.8v3.375h2.024v9.793h4.052Z", :fill => "#3B5998"}
+        .text
+          =t('sign_in.continue_with', social: 'Facebook')
+    .divider
+    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"} do
+      .social-app-button
+        %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
+          %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
+          %path{:d => "M18 13.215c1.465 0 2.453.633 3.016 1.162l2.202-2.15C21.866 10.971 20.106 10.2 18 10.2a7.794 7.794 0 0 0-6.968 4.299l2.522 1.959c.633-1.881 2.384-3.242 4.446-3.242Z", :fill => "#EA4335"}
+          %path{:d => "M25.488 18.173c0-.641-.052-1.11-.165-1.595H18v2.895h4.299c-.087.72-.555 1.803-1.595 2.53l2.461 1.907c1.474-1.36 2.323-3.363 2.323-5.737Z", :fill => "#4285F4"}
+          %path{:d => "M13.563 19.542a4.8 4.8 0 0 1-.26-1.543c0-.537.095-1.057.251-1.542l-2.522-1.959a7.807 7.807 0 0 0-.832 3.501c0 1.257.304 2.444.832 3.502l2.53-1.959Z", :fill => "#FBBC05"}
+          %path{:d => "M18 25.8c2.106 0 3.874-.693 5.166-1.889l-2.462-1.907c-.658.46-1.542.78-2.704.78-2.062 0-3.813-1.36-4.437-3.241l-2.522 1.959c1.283 2.548 3.909 4.298 6.96 4.298Z", :fill => "#34A853"}
+        .text
+          =t('sign_in.continue_with', social: 'Google')
+  .lines-or-div
+    .line
+    .or
+      =t('sign_in.or')
+    .line
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .names-flex
+      .field
+        = f.label t('sign_up.fname')
+        = f.email_field :first_name, autocomplete: "email", class: 'form-control field-text-input'
+      .field
+        = f.label t('sign_up.lname')
+        = f.email_field :last_name, autocomplete: "email", class: 'form-control field-text-input'
+    .field
+      = f.label t('sign_in.your_email')
+      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input'
+    .field
+      = f.label t('sign_in.your_password')
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps"
+    .field
+      = f.label t('sign_up.dob')
+      %br/
+      .dob-picker
+        = f.date_select :date_of_birth, :order => [:day, :month, :year], selected: Date.today, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100
+
+    .field
+      .show-pass
+        %input#showPassword.form-check-input.show_password{:name => 'show-pass', :type => "checkbox", :value => ""}/
+        %label.form-check-label{:for => "showPassword"}
+          =t('sign_in.show_password')
+    .actions
+      = f.submit t('sign_up.submit_create'), class: "sign-button", data: { signform_target: 'button'}
+  .no-acc{style: 'padding-bottom: 4rem;'}
+    =t('sign_up.already_have_account')
+    =link_to t('sign_up.sign_in'), new_user_session_path

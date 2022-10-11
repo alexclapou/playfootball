@@ -37,6 +37,7 @@ ro:
     or: sau
     your_email: Email
     your_password: Parolă
+    password_confirmation: Confirmă parola
     forgot_password: Ai uitat parola?
     show_password: Afiseaza parola
     log_in: Autentificare
@@ -46,4 +47,14 @@ ro:
     question: Ai uitat parola?
     text: Introdu email-ul pentru a reseta parola
     reset_text: TRIMITE LINK
+  sign_up:
+    create_account: Creaza-ti contul
+    sign_with_app: Foloseste una din appUse one of the following applications to sign up on PlayFootball.
+    submit_create: Creaza cont
+    already_have_account: Ai deja un cont?
+    sign_in: Conectează-te
+    fname: Prenume
+    lname: Nume
+    dob: Data nasterii
+
 
