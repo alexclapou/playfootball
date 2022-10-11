@@ -13,12 +13,12 @@ button{
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: transparent !important;
+    background-color: red !important;
+    height: 0 !important;
     border: 0 !important;
     .social-app-button{
         padding: .4rem;
         width: 100%;
-        margin-top: .7rem !important;
         border: 0;
         background-color: var(--secondary-background-color);
         border-radius: 4px;

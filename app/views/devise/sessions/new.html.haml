@@ -3,14 +3,15 @@
     =t('sign_in.sign_in', sign: 'sign in')
   .sign-social-app
     =t('sign_in.sign_with_app')
-    .pb-4
-    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"} do
+    %div{style: 'padding-top:2.5rem !important;'}
+    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"}, class: 'popup' do
       .social-app-button
         %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
           %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
           %path{:d => "M19.876 28.584V18.79h2.703l.358-3.375h-3.061l.005-1.69c0-.88.083-1.35 1.347-1.35h1.69V9h-2.703c-3.248 0-4.39 1.637-4.39 4.39v2.026H13.8v3.375h2.024v9.793h4.052Z", :fill => "#3B5998"}
         .text
           =t('sign_in.continue_with', social: 'Facebook')
+    .divider
     =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"} do
       .social-app-button
         %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}

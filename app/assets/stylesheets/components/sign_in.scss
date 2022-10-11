@@ -51,6 +51,9 @@
     .sign-social-app{
         color: var(--primary-text-color) !important;
         margin: 1rem 0 2rem 0;
+        .divider{
+            height: .7rem !important;
+        }
         .social-app-button{
             .text{
                 a{
