@@ -36,10 +36,10 @@
       = render 'shared/warning_messages', data: {signform_target: 'warning'}, messages: flash[:alert]
     .field
       = f.label t('sign_in.your_email'), data: {signform_target: 'emailInput'}
-      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signform_target: 'email', action: 'signform#isValidCombination signform#isValidEmail' }
+      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signform_target: 'email', action: 'signform#isValidCombination' }
     .field
       = f.label t('sign_in.your_password'), data: {signform_target: 'passwordInput'}
-      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signform_target: 'password', action: 'signform#isValidCombination signform#isValidPassword' }
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signform_target: 'password', action: 'signform#isValidCombination' }
     .field
       =link_to t('sign_in.forgot_password'), new_password_path(resource_name), class: 'forgot-pass'
     .field

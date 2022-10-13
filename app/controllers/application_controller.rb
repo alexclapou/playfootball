@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale, :always_set_locale
   
   def display
@@ -16,6 +17,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :date_of_birth])
+  end
+
 
   def always_set_locale
     if controller_name != 'omniauth_callbacks'

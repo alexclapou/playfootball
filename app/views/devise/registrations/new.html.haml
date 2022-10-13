@@ -27,26 +27,30 @@
     .or
       =t('sign_in.or')
     .line
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = render "devise/shared/error_messages", resource: resource
+  = form_for(resource, as: resource_name, url: registration_path(resource_name),
+            data: { controller: "signupform" },
+            html: {novalidate: true}) do |f|
+    - if flash[:alert]
+      = render 'shared/warning_messages', data: {signupform_target: 'warning'}, messages: flash[:alert]
     .names-flex
       .field
-        = f.label t('sign_up.fname')
-        = f.email_field :first_name, autocomplete: "email", class: 'form-control field-text-input'
+        = f.label t('sign_up.fname'), data: {signupform_target: 'firstNameInput'}
+        = f.email_field :first_name, autocomplete: "email", class: 'form-control field-text-input', data: { signupform_target: 'firstName', action: 'signupform#isValidCombination' }
+        First name can't be blank
       .field
-        = f.label t('sign_up.lname')
-        = f.email_field :last_name, autocomplete: "email", class: 'form-control field-text-input'
+        = f.label t('sign_up.lname'), data: {signupform_target: 'lastNameInput'}
+        = f.email_field :last_name, autocomplete: "email", class: 'form-control field-text-input', data: { signupform_target: 'lastName', action: 'signupform#isValidCombination' }
     .field
-      = f.label t('sign_in.your_email')
-      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input'
+      = f.label t('sign_in.your_email'), data: {signupform_target: 'emailInput'}
+      = f.email_field :email, autocomplete: "email", class: 'form-control field-text-input', data: { signupform_target: 'email', action: 'signupform#isValidCombination' }
     .field
-      = f.label t('sign_in.your_password')
-      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps"
+      = f.label t('sign_in.your_password'), data: {signupform_target: 'passwordInput'}
+      = f.password_field :password, autocomplete: "current-password", class: 'form-control field-text-input', id: "sh-ps", data: { signupform_target: 'password', action: 'signupform#isValidCombination' }
     .field
-      = f.label t('sign_up.dob')
+      = f.label t('sign_up.dob'), data: {signupform_target: 'dateOfBirthInput'}
       %br/
       .dob-picker
-        = f.date_select :date_of_birth, :order => [:day, :month, :year], selected: Date.today, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100
+        = f.date_select :date_of_birth, :order => [:day, :month, :year], selected: Date.today, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100, data: { signupform_target: 'dateOfBirth', action: 'signupform#isValidCombination' }
 
     .field
       .show-pass
@@ -54,7 +58,7 @@
         %label.form-check-label{:for => "showPassword"}
           =t('sign_in.show_password')
     .actions
-      = f.submit t('sign_up.submit_create'), class: "sign-button", data: { signform_target: 'button'}
+      = f.submit t('sign_up.submit_create'), class: "sign-button", data: { signupform_target: 'button'}
   .no-acc{style: 'padding-bottom: 4rem;'}
     =t('sign_up.already_have_account')
     =link_to t('sign_up.sign_in'), new_user_session_path
