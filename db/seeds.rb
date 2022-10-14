@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+# account for local
+User.create(email: 'alexclapou@gmail.com', password:'parola', password_confirmation: 'parola', first_name: 'Alexandru', last_name: 'Clapou', date_of_birth: '05-02-2000')
+puts "user #{User.last.email} created".green

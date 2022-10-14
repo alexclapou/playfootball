@@ -1,0 +1,23 @@
+.settings-tabs{
+  padding-top: 1rem;
+  .settings-tab{
+    padding-top: 0.5rem !important;
+  }
+  button{
+    text-align: left;
+    padding-left: 0.5rem !important;
+    color: var(--primary-text-color);
+    &:hover{
+      background-color: var(--secondary-background-color) !important;
+      color:  var(--primary-text-color) !important;
+    }
+  }
+  .nav-link.active{
+    border-radius: 5 !important;
+    background-color: transparent !important;
+    cursor: default;
+    color:  var(--primary-text-color) !important;
+    background-color: var(--secondary-background-color) !important;
+    font-weight: bold !important;
+  }
+}

@@ -87,3 +87,8 @@ en:
     fname: First Name
     lname: Last Name
     dob: Date of birth
+  settings:
+    public: Public
+    activity: Activity
+    pass_and_auth: Password and authentication
+    billing: Billing and payments
