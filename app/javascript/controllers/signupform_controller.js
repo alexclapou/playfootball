@@ -6,6 +6,7 @@ export default class extends Controller {
                     'password', 'passwordInput', 'dateOfBirth', 'dateOfBirthInput', 'button', 'warning']
 
   connect() {
+    this.isValidCombination()
     if(this.wrongCredentials())
       this.markInvalidCredentials()
   }
@@ -63,7 +64,9 @@ export default class extends Controller {
   }
 
   isValidDob(){
-    return true
+    console.log(this.firstNameTarget)
+    console.log(this.dateOfBirthTarget)
+    return false;
   }
 
   wrongCredentials(){
@@ -77,4 +80,11 @@ export default class extends Controller {
     this.passwordInputTarget.classList.add('warning-label')
   }
 
+  isValidCombination(){
+    console.log('ads')
+    if(this.isValidEmail() && this.isValidPassword() && this.isValidFirstName() && this.isValidLastName() && this.isValidDob())
+      this.buttonTarget.disabled = false
+    else
+      this.buttonTarget.setAttribute('disabled', 'disabled')
+  }
 }

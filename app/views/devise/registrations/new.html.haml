@@ -36,7 +36,6 @@
       .field
         = f.label t('sign_up.fname'), data: {signupform_target: 'firstNameInput'}
         = f.email_field :first_name, autocomplete: "email", class: 'form-control field-text-input', data: { signupform_target: 'firstName', action: 'signupform#isValidCombination' }
-        First name can't be blank
       .field
         = f.label t('sign_up.lname'), data: {signupform_target: 'lastNameInput'}
         = f.email_field :last_name, autocomplete: "email", class: 'form-control field-text-input', data: { signupform_target: 'lastName', action: 'signupform#isValidCombination' }
@@ -50,7 +49,7 @@
       = f.label t('sign_up.dob'), data: {signupform_target: 'dateOfBirthInput'}
       %br/
       .dob-picker
-        = f.date_select :date_of_birth, :order => [:day, :month, :year], selected: Date.today, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100, data: { signupform_target: 'dateOfBirth', action: 'signupform#isValidCombination' }
+        = f.date_select :date_of_birth, :order => [:day, :month, :year], selected: Date.today, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100, data: {signupform_target: 'dateOfBirth', action: 'signupform#isValidCombination signupform#isValidDob' }
 
     .field
       .show-pass

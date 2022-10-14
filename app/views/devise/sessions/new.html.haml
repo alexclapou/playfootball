@@ -4,7 +4,7 @@
   .sign-social-app
     =t('sign_in.sign_with_app')
     %div{style: 'padding-top:2.5rem !important;'}
-    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"}, class: 'popup' do
+    =button_to user_facebook_omniauth_authorize_path, method: :post, data: {turbo: "false"}, class: 'popup', id: 'facebook-button', :"data-width" => 600, :"data-height" => 400, html: { id: 'facebook-button' }do
       .social-app-button
         %svg{:fill => "none", :height => "36", :width => "36", :xmlns => "http://www.w3.org/2000/svg"}
           %path{:d => "M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18Z", :fill => "#fff"}
@@ -52,3 +52,9 @@
   .no-acc
     =t('sign_in.no_acc')
     =link_to t('sign_in.sign_up'), new_user_registration_path
+
+:javascript
+  if(window.opener) {
+    window.opener.location.reload(true);
+    window.close()
+  }

@@ -1,8 +1,7 @@
 - if user_signed_in?
-  /email_off
   %h3
-    = current_user.email
-  //email_off
+    = current_user.first_name
+    = current_user.last_name
   %p.mx-0.my-0{style: 'margin-top: -8px !important;'}
     = link_to t('profile.sign_out'), destroy_user_session_path, class: 'sign-in-text', data: { turbo_method: :delete }
 - else

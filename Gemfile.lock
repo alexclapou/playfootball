@@ -130,7 +130,7 @@ GEM
       activesupport (>= 5.0.0)
     json (2.6.2)
     jwt (2.5.0)
-    loofah (2.18.0)
+    loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -306,7 +306,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   x86_64-darwin-21
@@ -321,6 +321,7 @@ DEPENDENCIES
   haml
   importmap-rails
   jbuilder
+  omniauth
   omniauth-facebook
   omniauth-rails_csrf_protection
   pg
