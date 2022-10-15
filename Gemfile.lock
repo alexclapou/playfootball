@@ -101,6 +101,8 @@ GEM
       html2haml
     erubi (1.11.0)
     erubis (2.7.0)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     faraday (2.6.0)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -318,6 +320,7 @@ DEPENDENCIES
   debug
   devise
   erb2haml
+  faker
   haml
   importmap-rails
   jbuilder

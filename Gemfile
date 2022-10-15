@@ -19,6 +19,8 @@ gem 'rubocop'
 
 gem 'devise'
 
+gem 'faker'
+
 gem 'omniauth'
 gem "omniauth-facebook"
 gem "omniauth-rails_csrf_protection"

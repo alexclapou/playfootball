@@ -55,4 +55,9 @@ ro:
     sign_in: Conectează-te
     fname: Prenume
     lname: Nume
-    dob: Data nasterii
+    dob: Data nașterii
+  settings:
+    public: Public
+    activity: Activitate
+    pass_and_auth: Parolă și autentificare
+    billing: Facturare și plăți
