@@ -1,4 +1,4 @@
-=render partial: 'profile_tabs'
+=render partial: 'profile/profile_tabs'
 .profile-tabs
   .theme-div
     %h5
@@ -11,7 +11,6 @@
               =t('profile.en')
               %input{:name => "lang-radio", :id => "en-lang", :type => "radio", :value => "auto",  :checked => params[:locale] == 'en', :class => "form-check-input"}
       .theme-lang-selector.col-md-4.col-sm-5.col-6
-        %a{:href => "/ro/language-and-theme"}
         =link_to language_and_theme_path(locale: 'ro') do
           %label{:for => "ro-lang"}
             .selector{class: "#{params[:locale] == 'ro' ? 'active' : ''}"}

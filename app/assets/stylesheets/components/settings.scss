@@ -1,10 +1,8 @@
 .settings-tabs{
   padding-top: 1rem;
   .settings-tab{
-    padding-left: 0.5rem !important;
-    padding-top: 0.5rem !important;
+    padding-left: 3rem !important;
     justify-content: space-between;
-    background-color: red !important;
   }
   .divider{
     @media (min-width: 768px) { 
@@ -17,9 +15,12 @@
     padding-bottom: 1rem;
     border-bottom: 1px var(--divide-color) solid;
   }
-  button{
+  a{
     text-align: left;
     padding-left: 0.5rem !important;
+    @media (min-width: 768px) { 
+      width: 15rem !important;
+    }
     color: var(--primary-text-color);
     &:hover{
       background-color: var(--secondary-background-color) !important;

@@ -2,13 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale, :always_set_locale
   
-  def display
-    cookies[:theme] = {
-      value: params[:theme].to_sym
-    }
-    redirect_to language_and_theme_path
-  end
-
   def default_url_options
     if controller_name != 'omniauth_callbacks'
       { locale: I18n.locale }
@@ -21,7 +14,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :date_of_birth])
   end
-
 
   def always_set_locale
     if controller_name != 'omniauth_callbacks'

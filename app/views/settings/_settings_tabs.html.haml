@@ -1,0 +1,6 @@
+.align-items-start.d-md-flex
+  .nav.flex-column.nav-pills.me-1
+    =link_to t('settings.public'), settings_public_index_path, class: "nav-link #{current_page?(settings_public_index_path) ? 'active' : ''} "
+    =link_to t('settings.activity'), settings_activity_index_path, class: "nav-link #{current_page?(settings_activity_index_path) ? 'active' : ''} "
+    =link_to t('settings.pass_and_auth'), settings_password_and_authentication_index_path, class: "nav-link #{current_page?(settings_password_and_authentication_index_path) ? 'active' : ''} "
+    =link_to t('settings.billing'), settings_billing_and_payments_path, class: "nav-link #{current_page?(settings_billing_and_payments_path) ? 'active' : ''} "

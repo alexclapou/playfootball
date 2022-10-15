@@ -1,0 +1,21 @@
+=render partial: 'profile/profile_tabs'
+.settings-tabs
+  .align-items-start.d-md-flex
+    =render partial: 'settings/settings_tabs'
+    .divider
+    .settings-tab
+      public
+      = form_for @user, url: settings_public_path(locale: I18n.locale, id: @user) do |f|
+        .field
+          = f.label :email
+          = f.text_field :email
+        .field
+          = f.label :first_name
+          = f.text_field :first_name
+        .field
+          = f.label :last_name
+          = f.text_field :last_name
+        .field
+          = f.label :date_of_birth
+          = f.text_field :date_of_birth
+        = f.submit

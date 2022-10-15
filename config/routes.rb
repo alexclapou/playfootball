@@ -10,11 +10,18 @@ Rails.application.routes.draw do
 
     # profile page
     get 'profile', to: 'profile#show'
-    get 'settings', to: 'profile#settings'
-    get 'language-and-theme', to: 'profile#language_and_display'
 
-    # change display theme
-    get '/display:theme', to: 'application#display', as: 'theme'
+    # user settings page
+    namespace :settings do
+      resources :public, only: %i[index update]
+      resources :activity, only: %i[index update]
+      resources :password_and_authentication, only: %i[index update], path: 'password-and-authentication'
+      resources :billing_and_payments, only: %i[index update], path: 'billing-and-payments'
+    end
+
+    # language and themes page
+    get 'language-and-theme', to: 'language_and_themes#show'
+    get '/display:theme', to: 'language_and_themes#display', as: 'theme'
   end
 
   # omniauth
