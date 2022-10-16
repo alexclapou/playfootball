@@ -1,8 +1,15 @@
 .settings-tabs{
   padding-top: 1rem;
   .settings-tab{
-    padding-left: 3rem !important;
+    color: var(--primary-text-color) !important;
+    @media (min-width: 768px) { 
+      padding-left: 3rem !important;
+    }
     justify-content: space-between;
+    .names-flex{
+      display: flex;
+      gap: 25px;
+    }
   }
   .divider{
     @media (min-width: 768px) { 
@@ -25,6 +32,15 @@
     &:hover{
       background-color: var(--secondary-background-color) !important;
       color:  var(--primary-text-color) !important;
+    }
+  }
+  .settings-input{
+    width: 100% !important;
+    background-color: var(--primary-background-color) !important;
+    height: 2.2rem !important;
+    &:disabled{
+      cursor: default !important;
+      background-color: var(--secondary-background-color) !important;
     }
   }
   .nav-link.active{

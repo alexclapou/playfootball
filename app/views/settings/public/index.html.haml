@@ -4,18 +4,21 @@
     =render partial: 'settings/settings_tabs'
     .divider
     .settings-tab
-      public
       = form_for @user, url: settings_public_path(locale: I18n.locale, id: @user) do |f|
-        .field
-          = f.label :email
-          = f.text_field :email
-        .field
-          = f.label :first_name
-          = f.text_field :first_name
-        .field
-          = f.label :last_name
-          = f.text_field :last_name
-        .field
-          = f.label :date_of_birth
-          = f.text_field :date_of_birth
-        = f.submit
+        .field.pb-4
+          = f.label t('sign_in.your_email')
+          = f.text_field :email, class: 'form-control field-text-input settings-input', disabled: 'disabled'
+          %div{style: 'font-size: .9rem !important;'}
+            The email can't be changed. Only you can see your email
+        .names-flex.pb-4
+          .field
+            = f.label t('sign_up.fname')
+            = f.text_field :first_name, class: 'form-control field-text-input settings-input'
+          .field
+            = f.label t('sign_up.lname')
+            = f.text_field :last_name, class: 'form-control field-text-input settings-input'
+        .field.pb-4
+          = f.label t('sign_up.dob')
+          .dob-picker
+            = f.date_select :date_of_birth, :order => [:day, :month, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.current.year, end_year:Date.current.year - 100
+        = f.submit t('settings.save'), class: 'sign-button save_button'

@@ -3,5 +3,15 @@
   .align-items-start.d-md-flex
     =render partial: 'settings/settings_tabs'
     .divider
-    .tab-content.settings-tab
-      security
+    .settings-tab
+      = form_for @user, url: settings_password_and_authentication_path(locale: I18n.locale, id: @user) do |f|
+        .field.pb-4
+          = f.label t('sign_in.your_email')
+          = f.password_field :old_password, class: 'form-control field-text-input settings-input'
+        .field.pb-4
+          = f.label t('sign_up.fname')
+          = f.password_field :new_password, class: 'form-control field-text-input settings-input'
+        .field.pb-4
+          = f.label t('sign_up.lname')
+          = f.password_field :new_password_confirmation, class: 'form-control field-text-input settings-input'
+        = f.submit t('settings.save'), class: 'sign-button save_button'
