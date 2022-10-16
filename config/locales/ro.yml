@@ -57,7 +57,10 @@ ro:
     lname: Nume
     dob: Data nașterii
   settings:
-    public: Public
+    public: General
     activity: Activitate
     pass_and_auth: Parolă și autentificare
     billing: Facturare și plăți
+    save: Salvează
+  date:
+    month_names: [Ianuarie, Februarie, Martie, Aprilie, Mai, Iunie, Iulie, August, Septembrie, Octombrie, Noiembrie, Decembrie]
